@@ -8,7 +8,7 @@ import numpy as np
 import os
 
 # ── Create plots folder if it doesn't exist
-os.makedirs("plots", exist_ok=True)
+os.makedirs("../plots", exist_ok=True)
 
 # ── Global chart style — dark theme looks great on GitHub
 plt.style.use("dark_background")
@@ -46,7 +46,7 @@ def plot_price_history(stocks, tickers):
     ax.grid(True, alpha=0.2)
 
     plt.tight_layout()
-    plt.savefig("plots/01_price_history.png", dpi=150)
+    plt.savefig("../plots/01_price_history.png", dpi=150)
     plt.close()
     print("  ✓ Saved: plots/01_price_history.png")
 
@@ -87,7 +87,7 @@ def plot_cumulative_returns(close_prices, tickers):
     ax.grid(True, alpha=0.2)
 
     plt.tight_layout()
-    plt.savefig("plots/02_cumulative_returns.png", dpi=150)
+    plt.savefig("../plots/02_cumulative_returns.png", dpi=150)
     plt.close()
     print("  ✓ Saved: plots/02_cumulative_returns.png")
 
@@ -124,7 +124,7 @@ def plot_moving_averages(stocks, ticker="AAPL"):
     ax.grid(True, alpha=0.2)
 
     plt.tight_layout()
-    plt.savefig(f"plots/03_moving_averages_{ticker}.png", dpi=150)
+    plt.savefig(f"../plots/03_moving_averages_{ticker}.png", dpi=150)
     plt.close()
     print(f"  ✓ Saved: plots/03_moving_averages_{ticker}.png")
 
@@ -180,7 +180,7 @@ def plot_rsi(stocks, ticker="AAPL"):
     ax2.grid(True, alpha=0.2)
 
     plt.tight_layout()
-    plt.savefig(f"plots/04_rsi_{ticker}.png", dpi=150)
+    plt.savefig(f"../plots/04_rsi_{ticker}.png", dpi=150)
     plt.close()
     print(f"  ✓ Saved: plots/04_rsi_{ticker}.png")
 
@@ -229,7 +229,7 @@ def plot_bollinger_bands(stocks, ticker="AAPL"):
     ax.grid(True, alpha=0.2)
 
     plt.tight_layout()
-    plt.savefig(f"plots/05_bollinger_{ticker}.png", dpi=150)
+    plt.savefig(f"../plots/05_bollinger_{ticker}.png", dpi=150)
     plt.close()
     print(f"  ✓ Saved: plots/05_bollinger_{ticker}.png")
 
@@ -285,7 +285,7 @@ def plot_volatility(close_prices, tickers):
     ax.legend(handles=legend, fontsize=9)
 
     plt.tight_layout()
-    plt.savefig("plots/06_volatility.png", dpi=150)
+    plt.savefig("../plots/06_volatility.png", dpi=150)
     plt.close()
     print("  ✓ Saved: plots/06_volatility.png")
 
@@ -329,6 +329,6 @@ def plot_correlation(close_prices):
                  fontsize=16, fontweight="bold", pad=15)
 
     plt.tight_layout()
-    plt.savefig("plots/07_correlation.png", dpi=150)
+    plt.savefig("../plots/07_correlation.png", dpi=150)
     plt.close()
     print("  ✓ Saved: plots/07_correlation.png")
