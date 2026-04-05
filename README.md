@@ -66,4 +66,4 @@ Stock-Market-Performance-Analyzer/
 *(Add your chart screenshots here after running)*
 
 ## 👤 Author
-Your Name — [GitHub](https://github.com/yourusername)
+Pooja Challa — [GitHub](https://github.com/poojachalla-dev)
