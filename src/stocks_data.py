@@ -4,16 +4,16 @@ import yfinance as yf
 tickers = ["MSFT", "AAPL", "GOOGL", "AMZN", "META", "TSLA", "NVDA", "JPM", "V", "UNH"]
 
 def get_stocks():
-    data = yf.download(tickers, period="1y", auto_adjust=True, progress=False)
+    df = yf.download(tickers, period="1y", auto_adjust=True, progress=False)
 
     stocks = {}
     for ticker in tickers:
         stocks[ticker] = pd.DataFrame({
-            "Open"  : data["Open"][ticker],
-            "High"  : data["High"][ticker],
-            "Low"   : data["Low"][ticker],
-            "Close" : data["Close"][ticker],
-            "Volume": data["Volume"][ticker],
+            "Open"  : df["Open"][ticker],
+            "High"  : df["High"][ticker],
+            "Low"   : df["Low"][ticker],
+            "Close" : df["Close"][ticker],
+            "Volume": df["Volume"][ticker],
         })
 
     close_prices = pd.DataFrame({
