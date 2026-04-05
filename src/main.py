@@ -7,6 +7,7 @@ from returns import (
     print_best_worst,
     print_cumulative,
 )
+from indicators import add_all_indicators, print_latest_indicators
 
 # ── Step 1: Load data
 print("⏳ Downloading stock data...")
@@ -23,3 +24,11 @@ print_avg_returns(daily_returns)
 print_risk(daily_returns)
 print_best_worst(daily_returns)
 print_cumulative(daily_returns)
+
+# ── Step 4: Indicators
+print("\n⏳ Calculating indicators...")
+for ticker in stocks:
+    stocks[ticker] = add_all_indicators(stocks[ticker])
+print("✓ Indicators added!")
+
+print_latest_indicators(stocks)
