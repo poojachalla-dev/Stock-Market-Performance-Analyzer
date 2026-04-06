@@ -1,69 +1,167 @@
-# 📈 Stock Market Performance Analyzer
+# 📈 Stock Market Performance Analyser
 
-A Python project that downloads, analyses, and visualises
-real stock market data using NumPy, Pandas, and Matplotlib.
+A full-stack data analysis web app built with **Python, Pandas, NumPy, Plotly and Streamlit** that downloads, analyses and visualises real stock market data through an interactive dashboard.
 
-## 🔍 What it does
-- Downloads 1 year of real stock data (10 major stocks)
-- Calculates daily & cumulative returns
-- Measures risk using standard deviation
-- Adds technical indicators (SMA, EMA, RSI, Bollinger Bands)
-- Generates 7 professional charts
+---
 
-## 📊 Charts Generated
-| Chart | Description |
-|---|---|
-| Price History | Closing prices for all 10 stocks |
-| Cumulative Returns | How $100 grows over the year |
-| Moving Averages | SMA 20 & SMA 50 trend lines |
-| RSI | Overbought & oversold signals |
-| Bollinger Bands | Volatility bands around price |
-| Volatility | Risk comparison across stocks |
-| Correlation | How stocks move together |
+## 🌟 Features
+
+### 📊 Data Analysis
+- Downloads **1 year of real stock data** for 10 major stocks
+- Calculates **daily & cumulative returns**
+- Measures **risk** using standard deviation
+- Detects **missing data** automatically
+
+### 📐 Technical Indicators
+- **SMA** — Simple Moving Average (20 & 50 day)
+- **EMA** — Exponential Moving Average (20 & 50 day)
+- **RSI** — Relative Strength Index (overbought/oversold signals)
+- **Bollinger Bands** — volatility bands around price
+
+### 📉 Interactive Dashboard
+- 🔴 Live **KPI metrics** — price, return, volatility, RSI
+- 📈 **Price history** chart — all stocks compared
+- 💰 **Cumulative returns** — how $100 grows over the year
+- 📊 **Moving averages** — trend analysis per stock
+- 📉 **RSI chart** — overbought & oversold zones
+- 📉 **Bollinger Bands** — volatility visualisation
+- ⚠️ **Volatility comparison** — risk across all stocks
+- 🔗 **Correlation heatmap** — how stocks move together
+- 📋 **Raw data table** — highlighted min/max values
+
+---
 
 ## 🛠️ Tech Stack
-- **Python 3.x**
-- **Pandas** — data manipulation
-- **NumPy** — numerical calculations
-- **Matplotlib** — charts & visualisations
-- **yfinance** — real stock data
+
+| Tool | Purpose |
+|---|---|
+| **Python** | Core programming language |
+| **Pandas** | Data manipulation & analysis |
+| **NumPy** | Numerical calculations |
+| **yfinance** | Real stock market data |
+| **Plotly** | Interactive charts |
+| **Streamlit** | Web dashboard framework |
+| **Matplotlib** | Static chart generation |
+
+---
 
 ## 🚀 How to Run
 ```bash
 # 1. Clone the repo
 git clone https://github.com/yourusername/Stock-Market-Performance-Analyzer.git
+cd Stock-Market-Performance-Analyzer
 
 # 2. Create virtual environment
 python -m venv venv
-venv\Scripts\activate       # Windows
-source venv/bin/activate    # Mac/Linux
 
-# 3. Install dependencies
+# 3. Activate virtual environment
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # Mac/Linux
+
+# 4. Install dependencies
 pip install -r requirements.txt
 
-# 4. Run the analyser
-cd src
-python main.py
+# 5. Run the dashboard
+streamlit run dashboard.py
 ```
+
+Then open your browser at `http://localhost:8501` 🎉
+
+---
 
 ## 📁 Project Structure
 ```
 Stock-Market-Performance-Analyzer/
 │
 ├── src/
-│   ├── data.py          # Download & explore stock data
-│   ├── returns.py       # Return & risk calculations
-│   ├── indicators.py    # Technical indicators
-│   ├── charts.py        # Matplotlib visualisations
-│   └── main.py          # Main entry point
+│   ├── data.py            # Download & explore stock data
+│   ├── returns.py         # Return & risk calculations
+│   ├── indicators.py      # Technical indicators (SMA, RSI, BB)
+│   ├── charts.py          # Static Matplotlib charts
+│   └── main.py            # CLI entry point
 │
-├── plots/               # Generated charts saved here
-├── requirements.txt
+├── plots/                 # Static charts saved here
+│   ├── 01_price_history.png
+│   ├── 02_cumulative_returns.png
+│   ├── 03_moving_averages_AAPL.png
+│   ├── 04_rsi_AAPL.png
+│   ├── 05_bollinger_AAPL.png
+│   ├── 06_volatility.png
+│   └── 07_correlation.png
+│
+├── dashboard.py           # Streamlit interactive dashboard
+├── requirements.txt       # All dependencies
 └── README.md
 ```
 
-## 📸 Sample Charts
-*(Add your chart screenshots here after running)*
+---
+
+## 📊 Stocks Analysed
+
+| Ticker | Company | Sector |
+|---|---|---|
+| **MSFT** | Microsoft | Technology |
+| **AAPL** | Apple | Technology |
+| **GOOGL** | Alphabet (Google) | Technology |
+| **AMZN** | Amazon | E-Commerce |
+| **META** | Meta (Facebook) | Social Media |
+| **TSLA** | Tesla | Automotive/EV |
+| **NVDA** | NVIDIA | Semiconductors |
+| **JPM** | JP Morgan Chase | Finance |
+| **V** | Visa | Finance |
+| **UNH** | UnitedHealth | Healthcare |
+
+---
+
+## 📸 Dashboard Preview
+
+### 📈 Price History
+![Price History](plots/01_price_history.png)
+
+### 💰 Cumulative Returns
+![Cumulative Returns](plots/02_cumulative_returns.png)
+
+### 📊 Moving Averages
+![Moving Averages](plots/03_moving_averages_AAPL.png)
+
+### 📉 RSI
+![RSI](plots/04_rsi_AAPL.png)
+
+### 📉 Bollinger Bands
+![Bollinger Bands](plots/05_bollinger_AAPL.png)
+
+### ⚠️ Volatility Comparison
+![Volatility](plots/06_volatility.png)
+
+### 🔗 Correlation Heatmap
+![Correlation](plots/07_correlation.png)
+
+---
+
+## 💡 What I Learned
+
+- How to download and clean **real financial data** with Pandas
+- How to calculate **stock returns and risk metrics**
+- How to build **technical indicators** from scratch using NumPy
+- How to create **interactive charts** with Plotly
+- How to build a **full web dashboard** with Streamlit
+- How to structure a **professional Python project**
+
+---
+
+## 🗺️ Future Improvements
+
+- [ ] Add **MACD indicator**
+- [ ] Add **stock price prediction** using Machine Learning
+- [ ] Add **portfolio optimisation** (Sharpe Ratio)
+- [ ] Deploy to **Streamlit Cloud** (live public URL)
+- [ ] Add **date range selector** in dashboard
+- [ ] Support **Indian stocks** (NSE/BSE)
+
+---
 
 ## 👤 Author
-Pooja Challa — [GitHub](https://github.com/poojachalla-dev)
+
+**Pooja Challa**
+- GitHub: [@poojachalla-dev](https://github.com/poojachalla-dev)
+- LinkedIn: [PoojaChalla](https://www.linkedin.com/in/poojachalla)
