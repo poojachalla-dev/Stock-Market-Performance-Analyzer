@@ -1,6 +1,6 @@
 # 📈 Stock Market Performance Analyser
 
-A full-stack data analysis web app built with **Python, Pandas, NumPy, Plotly and Streamlit** that downloads, analyses and visualises real stock market data through an interactive dashboard.
+A full-stack data analysis web app built with **Python, Pandas, NumPy, MatPLotLib, Plotly and Streamlit** that downloads, analyses and visualises real stock market data through an interactive dashboard.
 
 ---
 
