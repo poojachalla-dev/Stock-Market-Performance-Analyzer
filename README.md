@@ -74,7 +74,7 @@ Then open your browser at `http://localhost:8501` 🎉
 Stock-Market-Performance-Analyzer/
 │
 ├── src/
-│   ├── data.py            # Download & explore stock data
+│   ├── stocks_data.py     # Download & explore stock data
 │   ├── returns.py         # Return & risk calculations
 │   ├── indicators.py      # Technical indicators (SMA, RSI, BB)
 │   ├── charts.py          # Static Matplotlib charts
