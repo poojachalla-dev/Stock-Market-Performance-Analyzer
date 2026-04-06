@@ -2,7 +2,7 @@
 
 A full-stack data analysis web app built with **Python, Pandas, NumPy, MatPLotLib, Plotly and Streamlit** that downloads, analyses and visualises real stock market data through an interactive dashboard.
 
-<a href="(https://poojachalla-stock-market-performance-analyzer.streamlit.app/)/" target="_blank">
+<a href="https://poojachalla-stock-market-performance-analyzer.streamlit.app/" target="_blank">
   🌐 Click here to view Live Dashboard
 </a>
 
